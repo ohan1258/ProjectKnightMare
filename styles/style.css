@@ -1,0 +1,26 @@
+table{
+	border: 5px solid blue;
+}
+
+td{ 
+	border: 2px solid black;
+	width: 60px;
+	height: 60px;
+}
+
+#turn_indicator{
+	text-align: center;
+	font-size: xx-large;
+}
+
+.white_cells{
+	background-color: white;
+}
+
+.black_cells{
+	background-color: #11eded;
+}
+
+.movable_cell{
+	background-color: #caf09c;
+}
