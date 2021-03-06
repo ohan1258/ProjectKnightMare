@@ -2,7 +2,7 @@
 //
 // current_games
 //{
-//	gameID:int,
+//	gameID:int,(we could also use the system generated id)
 //	playerWhite:string
 //  playerBlack:string
 //	position:string
@@ -18,7 +18,7 @@
 //}
 //
 //position: string encoding of the chess board where 64 characters denote 64 squares of chess board
-//starting from A1 to H8
+//starting from A1 to H1 to H8
 //pieces are: 
 //	X:empty
 //	P:white pawn
@@ -35,24 +35,24 @@
 //	q:black queen		  	
 
 const MongoClient = require("mongodb").MongoClient;
-const assert = require("assert");
+const Assert = require("assert");
 
 const url = "mongodb://localhost:27017";
 
 const dbName = "castle";
 
 MongoClient.connect(url, (err, client)=>{
-	assert.equal(null,err);
+	Assert.equal(null,err);
 	console.log("connected to server");
 
 	const db = client.db(dbName);
 	console.log("database:"+dbName+" created");
 	db.createCollection("current_games", (err, res)=>{
-		assert.equal(null,err);
+		Assert.equal(null,err);
 		console.log("collection:current_games created");
 	});
 	db.createCollection("completed_games", (err, res)=>{
-		assert.equal(null,err);
+		Assert.equal(null,err);
 		console.log("collection:completed_games created");
 	});
 	client.close();

@@ -1,0 +1,5 @@
+const INIT_POS = "RNBQKBNRPPPPPPPPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXpppppppprnbqkbnr";
+
+module.exports = {
+	INIT_POS: INIT_POS
+};
